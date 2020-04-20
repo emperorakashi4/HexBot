@@ -6,9 +6,10 @@ Available Commands:
 .listpms"""
 import asyncio
 import json
+import io
 from telethon import events
 from telethon.tl import functions, types
-from userbot.plugins.sql_helper.pmpermit_sql import is_approved, approve, disapprove, get_all_approved
+import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from userbot.utils import admin_cmd
 
 
