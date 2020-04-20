@@ -1,11 +1,6 @@
 
 # For UniBorg
-# Copyright (c) HexBot | 2020 
-# (c) HexBot
-"""
-Imdb Module
-.imdb
-"""
+# Copyright (c) HexBot | 2020
 
 import bs4
 import requests
@@ -19,7 +14,6 @@ from userbot.utils import admin_cmd
 
 langi = "en"
 
-#by Akashi
 @borg.on(admin_cmd("imdb (.*)", outgoing=True)) 
 async def imdb(e):
  try:
@@ -98,4 +92,4 @@ async def imdb(e):
     			link_preview = True , parse_mode = 'HTML'
     			)
  except IndexError:
-     await e.edit("Plox enter **Valid movie name** kthx")
+     await e.edit("Please Enter A Valid Name")
