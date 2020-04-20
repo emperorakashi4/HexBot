@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # (c) Akashi
 import asyncio
-from userbot.util import admin_cmd
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="type (.*)"))
