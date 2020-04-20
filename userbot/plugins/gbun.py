@@ -14,7 +14,7 @@ async def gbun(event):
     gbunVar = gbunVar[6:]
     mentions = "`Alert! User Is Banned In The` @Xiaomeme `Federation\n`"
     no_reason = "**Reason:** `Likely A Spammer!`"
-    await event.edit("**Starting A Federation Ban!")
+    await event.edit("**Starting A Federation Ban!**")
     asyncio.sleep(4)
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
