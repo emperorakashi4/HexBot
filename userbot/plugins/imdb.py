@@ -15,7 +15,7 @@ import re
 import subprocess
 import time
 from datetime import datetime
-from userbot.util import admin_cmd
+from userbot.utils import admin_cmd
 
 langi = "en"
 
